@@ -845,7 +845,8 @@ h2 {
   width: 100%;
   float: left;
   clear: both;
-  margin-top: 5px; }
+  margin-top: 5px; 
+  text-align: center;}
 
 .x_content h4 {
   font-size: 16px;
@@ -4129,3 +4130,18 @@ ul.notifications {
   border: 1px solid #e5e5e5; }
 
 /** /Dropzone.js **/
+
+
+/* Agregados! */
+.register-header{
+  margin-bottom: 30px;
+}
+
+form.centrado{
+  text-align: center;
+}
+
+.register_wrapper{
+  margin-top: 5%;
+}
+
