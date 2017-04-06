@@ -15,7 +15,7 @@ var validator = (function($){
     /* general text messages
     */
     message = {
-        invalid         : 'invalid input',
+        invalid         : 'dato incorrecto',
         checked         : 'must be checked',
         empty           : 'complete este campo',
         min             : 'input is too short',
@@ -145,6 +145,12 @@ var validator = (function($){
 
             return true;
         },
+
+        /*password : function(a){
+        var re = /^(?=.*[a-zA-Z])(?=.*[0-9])/;
+        return re.test(a) && (a.length >= 8);
+        },*/
+
         number : function(a){
             // if not not a number
             if( isNaN(parseFloat(a)) && !isFinite(a) ){

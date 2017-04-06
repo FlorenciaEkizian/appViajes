@@ -1607,7 +1607,8 @@ h4.graph_title {
   border-radius: 5px;
   background-clip: padding-box;
   background: #FFF;
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  padding: 10px; }
 
 .tile-stats:hover .icon i {
   animation-name: tansformAnimation;
@@ -1644,7 +1645,7 @@ h4.graph_title {
   padding: 0; }
 
 .tile-stats .count {
-  font-size: 38px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 1.65857; }
 
@@ -4132,7 +4133,10 @@ ul.notifications {
 /** /Dropzone.js **/
 
 
-/* Agregados! */
+/* Agregados flor! */
+
+/* registro */
+
 .register-header{
   margin-bottom: 30px;
 }
@@ -4144,4 +4148,42 @@ form.centrado{
 .register_wrapper{
   margin-top: 5%;
 }
+
+/* mis viajes */
+.boxViaje{
+  margin:10px;
+}
+
+.tile-stats .icon i{
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+.detalleEstadoViaje{
+  font-size: 14px;
+}
+
+.fechaViaje{
+  color: #BAB8B8;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.panelViaje{
+  background-color: #F7F7F7;
+  border:none;
+}
+
+.detalleContenidoViaje{
+  margin: 10px;
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+
 
