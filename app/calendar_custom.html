@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> On trip </title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- FullCalendar -->
+    <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+
+    <!-- Custom styling plus plugins -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Bienvenido,</span>
+                <h2>Pitu Sabadi</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="calendar_custom.html"><i class="fa fa-calendar-o"></i>AGENDA<span class="fa fa-chevron-down"></span></a>
+                  </li>
+                  <li><a><i class="fa fa-globe"></i>VIAJES <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="crearViaje.html">Crear</a></li>
+                      <li><a href="verViajes.html">Listado</a></li>
+                      <li><a href="verViaje.html">Roma</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-user"></i>MI PERFIL<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="www.google.com">opcion 1</a></li>
+                      <li><a href="http://www.elpais.com">opcion 2</a></li>
+                      <li><a href="www.dysney.com">opcion 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+            
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Calendar Events <small>Sessions</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                  
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div id='calendar'></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+      </div>
+    </div>
+
+    <!-- calendar modal -->
+    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Nuevo evento</h4>
+          </div>
+          <div class="modal-body">
+            <div id="testmodal" style="padding: 5px 20px;">
+              <form id="antoform" class="form-horizontal calender" role="form">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Seleccionar</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="type" name="type">
+                      <option value="tryp">Vuelo</option>
+                      <option value="hotel">Hotel</option>
+                      <option value="activity">Acvitidad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Nombre</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title" name="title">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Detalle</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                  </div>
+                </div>
+                <!-- IMPORTANT: en la ventana de crear nuevo evento, los nombres y los id's deben ser iguales -->
+
+                <!-- @monica form option tryp, add all inputs needed. -->
+                <div id="option_tryp" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Aerolínea</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="airline" name="airline">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Horario de salida</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="departureTime" name="departureTime">
+                    </div>
+                  </div>
+                </div>
+                <!-- @monica form option hotel, add all inputs needed -->
+                <div id="option_hotel" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Nombre de hotel</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="hotelName" name="hotelName">
+                    </div>
+                  </div>
+                </div>
+                <!-- @monica form option activity, add all inputs needed -->
+                <div id="option_activity" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Nombre de actividad</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="activityName" name="activityName">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary antosubmit">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel2">Editar</h4>
+          </div>
+          <div class="modal-body">
+
+            <div id="testmodal2" style="padding: 5px 20px;">
+              <form id="antoform2" class="form-horizontal calender" role="form">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Seleccionar</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="type2" name="type2">
+                      <option value="tryp">Vuelo</option>
+                      <option value="hotel">Hotel</option>
+                      <option value="activity">Actividad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Nombre</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title2" name="title2">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Detalle</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                  </div>
+                </div>
+                <!-- IMPORTANT: en la ventana de Editar, todos los ID's deben usar el 2 al final pero el "name" debe ser el mismo que en la ventana de new -->
+                <!-- @monica form option tryp, add all inputs needed -->
+                <div id="option_tryp2" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Aerolínea</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="airline2" name="airline">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Horario de salida</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="departureTime2" name="departureTime">
+                    </div>
+                  </div>
+                </div>
+                <!-- @monica form option hotel, add all inputs needed -->
+                <div id="option_hotel2" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Nombre hotel</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="hotelName2" name="hotelName">
+                    </div>
+                  </div>
+                </div>
+                <!-- @monica form option activity, add all inputs needed -->
+                <div id="option_activity2" class="type-option hidden">
+
+                  <!-- @monica Add your form options here -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">Nombre de actividad</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="activityName2" name="activityName">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger delete2" data-dismiss="modal">Eliminar</button>
+            <button type="button" class="btn btn-primary antosubmit2">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    <!-- /calendar modal -->
+        
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- FullCalendar -->
+    <script src="vendors/moment/min/moment.min.js"></script>
+    <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+
+    <!-- FullCalendar -->
+    <script>
+      $(window).load(function() {
+        var date = new Date(),
+            d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear(),
+            started,
+            categoryClass;
+
+        var calendar = $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          selectable: true,
+          selectHelper: true,
+          select: function(start, end, allDay) {
+            $('#fc_create').click();
+
+            // @monica initialize select type option
+            $('.type-option').addClass('hidden');
+            $('#option_tryp').removeClass('hidden');
+            $("#type2").val('tryp');
+
+            started = start;
+            ended = end;
+
+            // save button
+            $(".antosubmit").on("click", function() {
+              var title = $("#title").val();
+              var type = $("#type").val();
+              var descr = $("#descr").val();
+              var departureTime = $("#departureTime").val();
+              var airline = $("#airline").val();
+              var hotelName = $("#hotelName").val();
+              var activityName = $("#activityName").val();
+              if (end) {
+                ended = end;
+              }
+
+              categoryClass = $("#event_type").val();
+
+              if (title) {
+                calendar.fullCalendar('renderEvent', {
+                    title: title,
+                    start: started,
+                    end: end,
+                    allDay: allDay,
+                    type: type,
+                    descr: descr,
+                    departureTime: departureTime,
+                    airline: airline,
+                    hotelName: hotelName,
+                    activityName: activityName
+                  },
+                  true // make the event "stick"
+                );
+              }
+
+                $('#title').val('');
+                $('#descr').val('');
+                $('#departureTime').val('');
+                $('#airline').val('');
+                $('#hotelName').val('');
+                $('#activityName').val('');
+
+              calendar.fullCalendar('unselect');
+
+              $('.antoclose').click();
+
+              return false;
+            });
+
+            // @monica onChange select type
+            $("#type").on("change", function() {
+                $('.type-option').addClass('hidden');
+                $('#option_' + $(this).find(":selected").val()).removeClass('hidden');
+            });
+
+          },
+          eventClick: function(calEvent, jsEvent, view) {
+            $('#fc_edit').click();
+            $('#title2').val(calEvent.title);
+
+            // @monica initialize select type option
+            $('.type-option').addClass('hidden');
+            $('#option_' + calEvent.type + '2').removeClass('hidden');
+            $("#type2").val(calEvent.type);
+
+            // @monica
+            if (calEvent.type == 'tryp') {
+                $('#departureTime2').val(calEvent.departureTime);
+                $('#airline2').val(calEvent.airline);
+            } else if (calEvent.type == 'hotel') {
+                $('#hotelName2').val(calEvent.hotelName);
+            } else if (calEvent.type == 'activity') {
+                $('#activityName2').val(calEvent.activityName);
+            }
+
+            // @monica open URL in a new window
+            if (calEvent.url) {
+                window.open(calEvent.url, "_blank");
+                return false;
+            }
+
+            categoryClass = $("#event_type").val();
+
+            $(".antosubmit2").on("click", function() {
+                // @monica: save all data for different types
+                calEvent.title = $("#title2").val();
+                calEvent.type = $("#type2").find(":selected").val();
+                if ($('#type2').find(":selected").val() == 'tryp') {
+                    calEvent.departureTime = $("#departureTime2").val();
+                    calEvent.airline = $("#airline2").val();
+                } else if ($('#type2').find(":selected").val() == 'hotel') {
+                    calEvent.hotelName = $("#hotelName2").val();
+                } else if ($('#type2').find(":selected").val() == 'activity') {
+                    calEvent.activityName = $("#activityName2").val();
+                }
+                calendar.fullCalendar('updateEvent', calEvent);
+                $('.antoclose2').click();
+            });
+
+            // @monica delete button and remove the event
+            $(".delete2").on("click", function() {
+                calendar.fullCalendar('removeEvents', calEvent._id);
+            });
+
+            // @monica onChange select type
+            $("#type2").on("change", function() {
+                $('.type-option').addClass('hidden');
+                $('#option_' + $(this).find(":selected").val() + '2').removeClass('hidden');
+            });
+
+            calendar.fullCalendar('unselect');
+          },
+          editable: true,
+          // @monica Add initial events: add all example events for starting
+          events: [{
+            title: 'Tryp: All Day Event',
+            start: new Date(y, m, 1),
+            type: 'tryp',
+            airline: 'Iberia',
+            departureTime: '8:00 am'
+          }, {
+            title: 'Hotel stay: Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2),
+            type: 'hotel'
+          }, {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false,
+            type: 'activity'
+          }, {
+            title: 'Lunch',
+            start: new Date(y, m, d + 14, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false,
+            type: 'activity'
+          }, {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false,
+            type: 'activity'
+          }]
+        });
+      });
+    </script>
+    <!-- /FullCalendar -->
+  </body>
+</html>

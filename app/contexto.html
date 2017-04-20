@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>On Trip</title>
+    <title>On Trip </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,10 +15,8 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
-    <!-- Custom Theme Style -->
+    <!-- Custom styling plus plugins -->
     <link href="build/css/custom.css" rel="stylesheet">
   </head>
 
@@ -49,13 +47,18 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a href="calendar_custom.html"><i class="fa fa-calendar-o"></i>AGENDA<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-calendar-o"></i>AGENDA<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="www.google.com">opcion 1</a></li>
+                      <li><a href="http://www.elpais.com">opcion 2</a></li>
+                      <li><a href="www.dysney.com">opcion 3</a></li>
+                    </ul>
                   </li>
                   <li><a><i class="fa fa-globe"></i>VIAJES <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="crearViaje.html">Crear</a></li>
-                      <li><a href="verViajes.html">Listado</a></li>
-                      <li><a href="verViaje.html">Roma</a></li>
+                      <li><a href="www.google.com">opcion 1</a></li>
+                      <li><a href="http://www.elpais.com">opcion 2</a></li>
+                      <li><a href="www.dysney.com">opcion 3</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i>MI PERFIL<span class="fa fa-chevron-down"></span></a>
@@ -85,49 +88,13 @@
         </div>
         <!-- /top navigation -->
 
-
         <!-- page content -->
-        <div class="right_col">
+        <div class="right_col" role="main">
           <div class="">
             <div class="row">
-              <div>
+              <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_content">
-
-
-              <div class="x_title">
-                <h2>Próximos viajes</h2>
-                <div class="clearfix"></div>
-              </div>
-
-              <div class="row boxViaje">
-                      <div class="animated flipInY">
-                        <div class="tile-stats">
-                          <a href="verViaje.html" class="count">Roma</a>
-                          <div class="fechaViaje">4 al 8 de marzo</div>
-                        </div>
-                      </div>
-              </div>
-
-              <div class="x_title">
-                <h2>Historial</h2>
-                <div class="clearfix"></div>
-              </div>
-
-              <div class="row boxViaje">
-                      <div class="animated flipInY">
-                        <div class="tile-stats">
-                          <a href="verViaje.html" class="count">Dublin</a>
-                          <div class="fechaViaje">4 al 8 de enero</div>
-                        </div>
-                      </div>
-              </div>
-                           
-            </div>
-            <div class="x_content">
-              <a href="crearViaje.html" class=" btn btn-success"> Crear nuevo viaje </a>
-            </div>
-
 
 
                   </div>
@@ -139,7 +106,9 @@
         <!-- /page content -->
       </div>
     </div>
-   
+
+
+
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -148,6 +117,8 @@
     <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- FullCalendar -->
+    <script src="vendors/moment/min/moment.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>

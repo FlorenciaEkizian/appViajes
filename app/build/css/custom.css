@@ -230,7 +230,6 @@ body .container.body .right_col {
     padding: 10px !important; } }
 @media (max-width: 1200px) {
   .x_title h2 {
-    width: 62%;
     font-size: 17px; }
 
   .tile, .graph {
@@ -329,7 +328,7 @@ body .container.body .right_col {
 
 body {
   color: #73879C;
-  background: #2A3F54;
+  /*background: #2A3F54;*/
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -4170,7 +4169,6 @@ form.centrado{
 }
 
 .panelViaje{
-  background-color: #F7F7F7;
   border:none;
 }
 
