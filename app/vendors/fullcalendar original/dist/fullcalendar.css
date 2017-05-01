@@ -819,7 +819,7 @@ a.fc-more:hover {
 /* title text */
 
 .fc-toolbar h2 {
-	margin: 15px 0px 0px 0px ;
+	margin: 0;
 }
 
 /* button layering (for border precedence) */

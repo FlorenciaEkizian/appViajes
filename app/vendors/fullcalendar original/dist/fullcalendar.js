@@ -8960,7 +8960,7 @@ var Scroller = FC.Scroller = Class.extend({
 
 	// sets to natural height, unlocks overflow
 	clear: function() {
-		this.setHeight('auto'); 
+		this.setHeight('auto');
 		this.applyOverflow();
 	},
 
@@ -11802,11 +11802,6 @@ var BasicView = FC.BasicView = View.extend({
 
 	// Adjusts the vertical dimensions of the view to the specified values
 	setHeight: function(totalHeight, isAuto) {
-		
-		//Cesar  -  esta linea la he escrito para inicializar el valor de parametro venga lo que venga cuando llaman a la función
-		isAuto = true;
-		
-		
 		var eventLimit = this.opt('eventLimit');
 		var scrollerHeight;
 		var scrollbarWidths;
@@ -12064,7 +12059,7 @@ var MonthView = FC.MonthView = BasicView.extend({
 
 	// Overrides the default BasicView behavior to have special multi-week auto-height logic
 	setGridHeight: function(height, isAuto) {
-		
+
 		isAuto = isAuto || this.opt('weekMode') === 'variable'; // LEGACY: weekMode is deprecated
 
 		// if auto, make the height of each row the height that it would be if there were 6 weeks
@@ -12329,12 +12324,6 @@ var AgendaView = FC.AgendaView = View.extend({
 
 	// Adjusts the vertical dimensions of the view to the specified values
 	setHeight: function(totalHeight, isAuto) {
-		
-	    //Cesar  -  esta linea la he escrito para inicializar el valor de parametro venga lo que venga cuando llaman a la función 
-	    // WEEK & DAY lo pone a tope de alto.
-		isAuto = true;
-		
-		
 		var eventLimit;
 		var scrollerHeight;
 		var scrollbarWidths;
@@ -12389,7 +12378,6 @@ var AgendaView = FC.AgendaView = View.extend({
 	// given a desired total height of the view, returns what the height of the scroller should be
 	computeScrollerHeight: function(totalHeight) {
 		return totalHeight -
-		
 			subtractInnerElHeight(this.el, this.scroller.el); // everything that's NOT the scroller
 	},
 
