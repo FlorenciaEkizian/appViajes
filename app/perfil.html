@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>On Trip</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css"> 
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<!--PLANTILLA css-->
+	<link href="css/estilosPlantilla.css" rel="stylesheet" type="text/css"/>
+<!--component-css-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+  <script src="js/bigSlide.js"></script>
+  <script>
+		$(document).ready(function() {
+		$('.menu-link').bigSlide();
+		});
+  </script>
+
+</head>
+<body>
+<div class="body-back">
+	<div class="masthead pdng-stn1">
+		<div id="menu" class="panel" role="navigation">
+			<div class="wrap-content">
+				<div class="profile-menu text-center">
+					<img class="border-effect" src="images/logo.png" alt=" ">
+						<h3>MENU</h3>
+
+						<div class="pro-menu">
+							<div class="logo">
+								<li><a class=" link link--yaku" href="calendar.html">Agenda</a></li>
+								<li><a class=" link link--yaku" href="verViajes.html">Mis Viajes</a></li>
+								<li><a class=" link link--yaku" href="crearViaje.html">Crear Viaje</a></li>
+								<li><a class=" link link--yaku active" href="pefil.html">Mi Perfil</a></li>
+                <li><a class=" link link--yaku" href="login.html">Log out</a></li>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="phone-box wrap push" id="home">
+			<div class="menu-notify">
+				<div class="profile-left">
+					<a href="#menu" class="menu-link"><i class="fa fa-list-ul"></i></a>
+				</div>
+				<div class="Profile-mid">
+					<h5 class="pro-link"><a href="main.html">on Trip</a></h5>
+				</div>
+				<div class="clearfix"></div>
+			</div> 
+			
+    <!-- banner -->
+     <div class="details-grid">
+  		<div class="details-shade">
+  			<div class="details-right">
+  				<h3>Mi perfil</h3>
+  			</div>
+  	 </div>
+  	</div>
+     <!-- //banner -->
+
+		<!-- page content -->
+            <div class="datos">
+              <form action="editarPerfil.html" method="post" id="singupForm">
+
+                <p>NOMBRE</p>
+                <p class="negrita">Pitu</p>
+
+                <p>APELLIDO</p>
+                <p class="negrita">Sabadi</p>
+
+
+                <p>EMAIL</p>
+                <p class="negrita">mail@mail.com</p>
+
+                <p>CLAVE</p>
+                <p class="negrita">pppkhf</p>
+              
+
+                <div class="wthree-text"> 
+                  <div class="clear"> </div>
+                  <button type="submit" class="btn btn-success">Editar</button>
+                </div> 
+
+              </form>
+            </div>
+    <!-- /page content -->
+  </div>
+</div>
+
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- validator -->
+<script src="js/validate.js"></script>
+
+    <!-- validator -->
+ <script>
+  $().ready(function() {
+    $("#singupForm").validate({
+      rules: {
+        name: "required",
+        lastname: "required",
+        password: {
+          required: true,
+          minlength: 8
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        confirm_password: {
+          required: true,
+          minlength: 8,
+          equalTo: "#password"
+        },        
+      },
+      messages: {
+        name: "Ingresa tu nombre",
+        lastname: "Ingresa tu apellido",
+        password: {
+          required: "Ingresa la clave",
+          minlength: "La clave debe tener mínimo 8 caracteres"
+        },
+        confirm_password: {
+          required: "Ingresa una clave",
+          minlength: "La clave debe tener mínimo 8 caracteres",
+          equalTo: "La clave debe ser igual a la ingresada"
+        },
+
+        email: "Ingresa un email válido",
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>

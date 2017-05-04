@@ -1,143 +1,139 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<title>On Trip</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>On Trip</title>
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
 
-    <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+<!--font-awsome-css-->
+     <link rel="stylesheet" href="css/font-awesome.min.css"> 
+<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<!--PLANTILLA css-->
+	<link href="css/estilosPlantilla.css" rel="stylesheet" type="text/css"/>
+<!--component-css-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<!--script-->
+	<script src="js/modernizr.custom.js"></script>
+    <script src="js/bigSlide.js"></script>
+           <script>
+				$(document).ready(function() {
+				$('.menu-link').bigSlide();
+				});
+     </script>
 
-    <!-- Custom Theme Style -->
-    <link href="build/css/custom.css" rel="stylesheet">
-  </head>
 
-  <body class="login">
-    <div>
-      <div class="register_wrapper">
-        <div>
-          <section class="x_content">
-            <form class="form-horizontal form-label-left" novalidate action="home.html">
-              <div class="register-header">
-                <h1>On Trip</h1>
-                <h2>Registro</h2>                
-              </div>
-              
-              <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="name" class="form-control col-md-7 col-xs-12" name="name" required="required" type="text">
-                </div>
-              </div>
+</head>
+<body>
+<div>
+	<div class="masthead pdng-stn1">
 
-              <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="apellido">Apellido <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="apellido" class="form-control col-md-7 col-xs-12" name="apellido" required="required" type="text">
-                </div>
-              </div>
+	<!--contact --> 
+            <div class="w3agile contact">
+				<div id="small-dialog" class="">
+					<div class="login-modal"> 	
+						<div class="booking-info text-center">
+							<img class="border-effect logoInicio" src="images/logo-azul.png" alt="Logo on trip">
+						</div>
+						<div class="login-form">
+							<form action="verViajes.html" method="post" id="singupForm">
 
-              <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
-                </div>
-              </div>              
+								<p>NOMBRE</p>
+								<div class="item form-group">
+					               	 <input type="text" id="name" name="name" class="form-control">
+					            </div>	
+								<p>APELLIDO</p>
+								<div class="item form-group">
+					               	 <input type="text" id="lastname" name="lastname" class="form-control">
+					            </div>	
 
-              <div class="item form-group">
-                <label for="password" class="control-label col-md-3 col-sm-3 col-xs-12">Clave<span class="required">*</span></label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="password" type="password" name="password" data-validate="password" class="form-control col-md-7 col-xs-12" required="required">
-                </div>
-              </div>
-              <div class="item form-group">
-                <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repita la clave<span class="required">*</span></label>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-                </div>
-              </div>
+								<p>EMAIL</p>
+								<div class="item form-group">
+					               	 <input type="email" id="email" name="email" class="form-control">
+					            </div>
 
-              <div>
-                <button id="send" type="submit" class="btn btn-success">Registrarme</button>
-              </div>
+								<p>CLAVE</p>
+						        <div class="item form-group">
+						            <input id="password" name="password" type="password" class="form-control"/>
+						         </div>									
 
-              <div class="clearfix"></div>
+								<p>REPITA LA CLAVE</p>
+						        <div class="item form-group">
+						            <input id="confirm_password" name="confirm_password" type="password" class="form-control"/>
+						         </div>	
 
-              <div class="separator">
-                <p class="change_link">Ya tienes cuenta?
-                  <a href="login.html" class="to_register"> Ingresa aquí </a>
-                </p>
+								<div class="wthree-text"> 
+									<div class="clear"> </div>
+									<button type="submit" class="btn btn-success">Registrarme</button>
+								</div> 
 
-                <div class="clearfix"></div>
-                <br />
+							</form>
+							<p>¿Ya tienes cuenta?<a href="login.html" class="sign-in popup-top-anim"> Ingresa aquí</a></p>
+						</div> 
+					</div>
+				</div>
+			</div>
+	<!-- //contact-->
+   
+	</div>
+</div>
+	
 
-                <div>
-                  <p>©2017 All Rights Reserved. On Trip</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-      </div>
-    </div>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
 
-    <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
-    <!-- validator -->
-    <script src="vendors/validator/validator.js"></script>
+<!-- Validator -->
+<script src="js/validate.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+
 
     <!-- validator -->
-    <script>
-      // initialize the validator function
-      validator.message.date = 'not a real date';
+ <script>
+	$().ready(function() {
+		$("#singupForm").validate({
+			rules: {
+				name: "required",
+				lastname: "required",
+				password: {
+					required: true,
+					minlength: 8
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				confirm_password: {
+					required: true,
+					minlength: 8,
+					equalTo: "#password"
+				},				
+			},
+			messages: {
+				name: "Ingresa tu nombre",
+				lastname: "Ingresa tu apellido",
+				password: {
+					required: "Ingresa la clave",
+					minlength: "La clave debe tener mínimo 8 caracteres"
+				},
+				confirm_password: {
+					required: "Ingresa una clave",
+					minlength: "La clave debe tener mínimo 8 caracteres",
+					equalTo: "La clave debe ser igual a la ingresada"
+				},
 
-      // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-      $('form')
-        .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-        .on('change', 'select.required', validator.checkField)
-        .on('keypress', 'input[required][pattern]', validator.keypress);
+				email: "Ingresa un email válido",
+			}
+		});
+	});
+	</script>
 
-      $('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply($(this).siblings().last()[0]);
-      });
 
-      $('form').submit(function(e) {
-        e.preventDefault();
-        var submit = true;
-
-        // evaluate the form using generic validaing
-        if (!validator.checkAll($(this))) {
-          submit = false;
-        }
-
-        if (submit)
-          this.submit();
-
-        return false;
-      });
-    </script>
-
-  </body>
+</body>
 </html>
