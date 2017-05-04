@@ -13,7 +13,11 @@ html {
 }
 
 body {
+<<<<<<< Updated upstream
     background: #ffffff;
+=======
+    background: #44C3D2;
+>>>>>>> Stashed changes
     font-family: 'Catamaran', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -207,7 +211,7 @@ h5 {
 }
 
 .dark-text {
-    color: #272727;
+    color: #c2c2c2;
 }
 
 .grey-bg {
