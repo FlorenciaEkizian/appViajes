@@ -11,4 +11,4 @@ Joana Albuquerque
 Cesar, Dani, Jo y Flor para los amigos :)
 
 
-[GitHub Pages](https://pages.github.com/)
+[Landing](landing/index.html)
