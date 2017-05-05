@@ -1,4 +1,7 @@
-Trabajo Final App de Viajes
+Trabajo Final 
+Desarrollo Front-end y Metodologías Ágiles
+Máster UI/UX
+Año 2017
 
 ==========
 
@@ -10,5 +13,8 @@ Joana Albuquerque
 
 Cesar, Dani, Jo y Flor para los amigos :)
 
+==========
 
-[Landing](landing/index.html)
+
+[Landing demo](landing/index.html)
+[App demo](app/index.html)
